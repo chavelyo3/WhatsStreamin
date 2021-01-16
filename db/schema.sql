@@ -1,12 +1,21 @@
 ### Schema
 
-CREATE DATABASE cat_db;
-USE cat_db;
+CREATE DATABASE streaming;
+USE streaming;
 
-CREATE TABLE cats
+CREATE TABLE user
 (
 	id int NOT NULL AUTO_INCREMENT,
 	name varchar(255) NOT NULL,
-	sleepy BOOLEAN DEFAULT false,
 	PRIMARY KEY (id)
 );
+
+CREATE TABLE watchlist
+(
+	id int NOT NULL AUTO_INCREMENT,
+	movie_title varchar(255) NOT NULL,
+	platform varchar(255) NOT NULL
+
+);
+
+
