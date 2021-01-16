@@ -17,5 +17,3 @@ CREATE TABLE watchlist
 	platform varchar(255) NOT NULL
 
 );
-
-
