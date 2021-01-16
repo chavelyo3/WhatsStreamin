@@ -13,6 +13,7 @@ CREATE TABLE user
 CREATE TABLE watchlist
 (
 	id int NOT NULL AUTO_INCREMENT,
+	PRIMARY KEY (id),
 	movie_title varchar(255) NOT NULL,
 	platform varchar(255) NOT NULL
 
