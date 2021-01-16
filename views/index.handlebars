@@ -8,3 +8,16 @@
   </div>
   <button type="submit">Add User</button>
 </form>
+
+<ul>
+  {{#each user}}
+    {{name}}
+    <br>
+
+  <button class = "btn delete-btn" data-id="{{id}}">
+    Delete
+  </button>
+  <br><br>
+{{/each}}
+
+</ul>
