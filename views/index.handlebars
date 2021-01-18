@@ -1,4 +1,4 @@
-<h1>Streaming Watchlist!</h1>'
+<h1>Streaming Watchlist!</h1>
 
 <h2>Add a user</h2>
 <form class="create-form">
@@ -11,13 +11,10 @@
 
 <ul>
   {{#each user}}
-    {{name}}
-    <br>
-
-  <button class = "btn delete-btn" data-id="{{id}}">
+  {{user}}
+  <button class="btn delete-btn" data-id="{{id}}">
     Delete
   </button>
-  <br><br>
-{{/each}}
-
+  <br>
+  {{/each}}
 </ul>

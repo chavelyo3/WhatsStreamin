@@ -1,14 +1,15 @@
 var db = require("../models");
 
 module.exports = function(app) {
-  app.get("/api/users", function(req, res) {
+  app.get("/", function(req, res) {
     // 1. Add a join to include all of each Author's Posts
     db.user.findAll({
       // include: [db.watchlist]
     }).then(function(data) {
-      console.log(data);
-      res.render("index",data);
-      res.send("something");
+      const obj = {
+        user: data
+    };
+      res.render("index",obj);
     });
   });
 
