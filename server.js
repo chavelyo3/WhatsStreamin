@@ -25,15 +25,20 @@ app.use(express.static("public"));
 
 var exphbs = require("express-handlebars");
 
-app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.engine("handlebars", exphbs(
+  { 
+    defaultLayout: "main",
+    runtimeOptions: {
+      allowProtoPropertiesByDefault: true,
+      allowProtoMethodsByDefault: true,
+    },
+  }
+  ));
 app.set("view engine", "handlebars");
-
-// app.use(routes);
 
 // Routes
 // =============================================================
 require("./routes/api-routes.js")(app);
-// require("./routes/post-api-routes.js")(app);
 
 // Syncing our sequelize models and then starting our Express app
 // =============================================================
