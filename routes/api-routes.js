@@ -7,23 +7,28 @@ module.exports = function(app) {
       // include: [db.watchlist]
     }).then(function(data) {
       const obj = {
+        title: "Home Page",
         user: data
     };
-      res.render("index",obj);
+      res.render("homepage",obj);
     });
   });
 
-  // app.get("/api/authors/:id", function(req, res) {
-  //   // 2; Add a join to include all of the Author's Posts here
-  //   db.Author.findOne({
-  //     where: {
-  //       id: req.params.id
-  //     },
-  //     include: [db.Post]
-  //   }).then(function(dbAuthor) {
-  //     res.json(dbAuthor);
-  //   });
-  // });
+  app.get("/api/users/:id", function(req, res) {
+    // 2; Add a join to include all of the Author's Posts here
+    db.user.findOne({
+      where: {
+        id: req.params.id
+      },
+     // include: [db.Post]
+    }).then(function(data) {
+      const obj = {
+        title: "Name",
+        user: data
+      };
+       res.render("user",obj);
+    });
+  });
 
   // app.post("/api/authors", function(req, res) {
   //   db.Author.create(req.body).then(function(dbAuthor) {

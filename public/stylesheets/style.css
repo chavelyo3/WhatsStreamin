@@ -1,3 +1,22 @@
 h1 {
     text-align: center;
 }
+
+h2 {
+    text-align: center;
+}
+
+ul {
+    padding: 5px;
+    margin: 5px;
+}
+
+.create-form {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.delete-btn {
+    border-color: black;   
+}
