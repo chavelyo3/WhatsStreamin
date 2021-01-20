@@ -1,4 +1,3 @@
-/* eslint-disable */
 const db = require("../models");
 
 module.exports = function(app) {
@@ -35,8 +34,8 @@ module.exports = function(app) {
       });
   });
 
-  app.post("/api/users", function(req, res) {
-    db.user.create(req.body).then(function(data) {
+  app.post("/api/users", req => {
+    db.user.create(req.body).then(data => {
       console.log(data);
     });
   });
