@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 $(document).ready(() => {
   $(document).on("click", "#submitBtn", addUser);
   $(document).on("click", ".delete-btn", deleteUser);
@@ -7,10 +8,18 @@ $(document).ready(() => {
     const name = $("#username").val();
     const obj = { user: name };
 
-    $.post("/api/users", obj).then(location.reload());
+    $.post("/api/users", obj)
+      .then(location.reload());
   }
 
-  function deleteUser() {
-    alert("delete me");
+  function deleteUser(event) {
+    event.preventDefault();
+    const id = $(this).data("id");
+
+    $.ajax({
+      method: "DELETE",
+      url: "/api/users/delete/" + id
+    })
+      .then(location.reload());
   }
 });
