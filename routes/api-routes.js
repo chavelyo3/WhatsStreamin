@@ -1,3 +1,4 @@
+/* eslint-disable */
 const db = require("../models");
 
 module.exports = function(app) {
@@ -34,11 +35,11 @@ module.exports = function(app) {
       });
   });
 
-  // app.post("/api/authors", function(req, res) {
-  //   db.Author.create(req.body).then(function(dbAuthor) {
-  //     res.json(dbAuthor);
-  //   });
-  // });
+  app.post("/api/users", function(req, res) {
+    db.user.create(req.body).then(function(data) {
+      console.log(data);
+    });
+  });
 
   // app.delete("/api/authors/:id", function(req, res) {
   //   db.Author.destroy({
