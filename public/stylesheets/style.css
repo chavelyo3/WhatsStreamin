@@ -20,3 +20,14 @@ ul {
 .delete-btn {
     border-color: black;   
 }
+
+.card {
+    margin-bottom: 5px;
+}
+
+.card-body {
+    background-color:burlywood;
+    border-radius: 50px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 20px;
+}
