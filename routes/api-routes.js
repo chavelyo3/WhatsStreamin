@@ -2,7 +2,6 @@ const db = require("../models");
 
 module.exports = function(app) {
   app.get("/", (req, res) => {
-    // 1. Add a join to include all of each Author's Posts
     db.user
       .findAll({
         // include: [db.watchlist]
@@ -17,7 +16,6 @@ module.exports = function(app) {
   });
 
   app.get("/api/users/:id", (req, res) => {
-    // 2; Add a join to include all of the Author's Posts here
     db.user
       .findOne({
         where: {
@@ -35,18 +33,20 @@ module.exports = function(app) {
   });
 
   app.post("/api/users", req => {
-    db.user.create(req.body).then(data => {
-      console.log(data);
+    db.user.create(req.body).then(() => {
+      console.log("User Added");
     });
   });
 
-  // app.delete("/api/authors/:id", function(req, res) {
-  //   db.Author.destroy({
-  //     where: {
-  //       id: req.params.id
-  //     }
-  //   }).then(function(dbAuthor) {
-  //     res.json(dbAuthor);
-  //   });
-  // });
+  app.delete("/api/users/delete/:id", req => {
+    db.user
+      .destroy({
+        where: {
+          id: req.params.id
+        }
+      })
+      .then(() => {
+        console.log("Deleted Succesfully");
+      });
+  });
 };
