@@ -1,4 +1,33 @@
-form.signup,
-form.login {
-  margin-top: 50px;
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+ul {
+    padding: 5px;
+    margin: 5px;
+}
+
+.create-form {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.delete-btn {
+    border-color: black;   
+}
+
+.card {
+    margin-bottom: 5px;
+}
+
+.card-body {
+    background-color:burlywood;
+    border-radius: 50px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 20px;
 }

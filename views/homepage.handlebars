@@ -1,0 +1,32 @@
+<h1>Streaming Watchlist!</h1>
+
+<div class="container">
+<h2>Add a user</h2>
+
+
+<form class="create-form">
+  <div class="form-group" id="user-form">
+    <label for="username"></label>
+    <input type="text" id="username" name="name">
+  </div>
+</form>
+  <button type="submit" id="submitBtn">Add User</button>
+<br>
+
+<div class="container">
+  {{#each user}}
+  <div class="row">
+    <div class="col-lg-4">
+      <div class="card text-center border-0" style="width: 18rem;">
+        <div class="card-body">
+          {{user}}
+          <button class="btn delete-btn btn-danger" data-id="{{id}}">
+            Delete
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  {{/each}}
+</div>
+</div>
