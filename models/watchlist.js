@@ -21,7 +21,7 @@ module.exports = function(sequelize, DataTypes) {
   watchlist.associate = function(models) {
     watchlist.belongsTo(models.user, {
       foreignKey: {
-        allowNull: true
+        allowNull: false
       }
     });
   };
