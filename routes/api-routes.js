@@ -4,7 +4,7 @@ module.exports = function(app) {
   app.get("/", (req, res) => {
     db.user
       .findAll({
-        // include: [db.watchlist]
+        include: [db.watchlist]
       })
       .then(data => {
         const obj = {
@@ -20,8 +20,8 @@ module.exports = function(app) {
       .findOne({
         where: {
           id: req.params.id
-        }
-        // include: [db.Post]
+        },
+        include: [db.watchlist]
       })
       .then(data => {
         const obj = {
