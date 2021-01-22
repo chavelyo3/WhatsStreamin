@@ -3,7 +3,6 @@
     <div class="row">
       <div class="col-md-10 col-lg-8 mx-auto text-center">
         <i class="far fas fa-user fa-2x mb-2 text-white"></i>
-        {{!-- <h2 class="text-white mb-5">Type User Name</h2> --}}
         <h2 class="text-white mb-4">{{user.user}}</h2>
         <form class="form-inline d-flex">
           <input class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="show" type="text" name="show"
@@ -24,24 +23,16 @@
         <div class="card py-4 h-100">
           <div class="card-body text-center">
             <label class="mt-5" for="show">Title:</label>
-            {{!-- <i class="fas fa-map-marked-alt text-primary mb-2"></i> --}}
-            {{!-- <i class="fas fa-users"></i> --}}
             <button class="btn  mx-auto btn-info " type="submit" id="submitBtn">{{user}}</button>
             <button class="mt-3 btn btn-danger" data-id="{{id}}">
               <i class="fas fa-trash"></i>
             </button>
-            {{!-- <a href="url"></a> --}}
-            {{!-- <h4 class="text-uppercase m-0"></h4> --}}
-            {{!--
-            <hr class="my-4" /> --}}
           </div>
         </div>
       </div>
       {{/each}}
     </div>
     <div class="social d-flex justify-content-center">
-      {{!-- <a class="mx-2" href="#!"><i class="fab fa-twitter"></i></a> --}}
-      {{!-- <a class="mx-2" href="#!"><i class="fab fa-facebook-f"></i></a> --}}
       <a class="mx-2" href="#!"><i class="fab fa-github"></i></a>
     </div>
   </div>
