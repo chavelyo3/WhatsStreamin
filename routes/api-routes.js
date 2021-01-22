@@ -32,7 +32,6 @@ module.exports = function(app) {
           movie: movie,
           netflix: netflix
         };
-        console.log(data);
         res.render("user", obj);
       });
   });
