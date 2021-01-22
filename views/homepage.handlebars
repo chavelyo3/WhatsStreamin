@@ -25,17 +25,20 @@
            
                 <div class="row"> 
                   {{#each user}}
-                    <div class="col-md-4 mb-3 mb-md-0">
+                    <div class="col-md-4 mb-3 mt-3 mb-md-0">
                         <div class="card py-4 h-100">
                           
                             <div class="card-body text-center">
                                 {{!-- <i class="fas fa-map-marked-alt text-primary mb-2"></i> --}}
-                                <i class="fas fa-users"></i>
-                                <h4 class="text-uppercase m-0">{{user}}</h4>
-                                <hr class="my-4" />
-                                 <button class="btn delete-btn btn-danger" data-id="{{id}}">
-            Delete
-          </button>
+                                {{!-- <i class="fas fa-users"></i> --}}
+                                 <button class="btn  mx-auto btn-info" type="submit" id="submitBtn">{{user}}</button>
+                                {{!-- <a href="url"></a> --}}
+                                {{!-- <h4 class="text-uppercase m-0"></h4> --}}
+                                {{!-- <hr class="my-4" /> --}}
+                                <br>
+                                 <button class="btn btn" data-id="{{id}}">
+                                   <i class="fas fa-trash"></i>
+                                 </button>
                                 {{!-- <div class="small text-black-50">4923 Market Street, Orlando FL</div> --}}
                             </div>
                         </div>
