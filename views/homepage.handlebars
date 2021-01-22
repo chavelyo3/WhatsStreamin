@@ -1,52 +1,43 @@
-{{!-- <h1>Streaming Watchlist!</h1> --}}
+<section class="signup-section" id="signup">
+   
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 col-lg-8 mx-auto text-center">
+        <i class="far fas fa-ticket-alt fa-2x mb-2 text-white"></i>
+        <p class="text-white-50">
+            
+          Whats Streamin is a free tv/movie search engine. It can be yours right now, simply create your username below
+          on to use the page</a>
+        </p>
+        <h2 class="text-white mb-5">Type User Name Below</h2>
+        <form class="form-inline d-flex">
+          <input class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="username" type="text"
+            placeholder="Enter Username..." />
+          <button class="btn btn-primary mx-auto js-scroll-trigger" type="submit" id="submitBtn"><i class="fas fa-user-plus"></i></button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
 
-
-
-       <!-- Signup-->
-        <section class="signup-section" id="signup">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-10 col-lg-8 mx-auto text-center">
-                        <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
-                        <h2 class="text-white mb-5">Type User Name</h2>
-                        <form class="form-inline d-flex">
-                            <input class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="username" type="text" placeholder="Enter Username..." />
-                            <button class="btn btn-primary mx-auto" type="submit" id="submitBtn">Add</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
- <section class="contact-section bg-black">   
-  
-            <div class="container">
-           
-                <div class="row"> 
-                  {{#each user}}
-                    <div class="col-md-4 mb-3 mb-md-0">
-                        <div class="card py-4 h-100">
-                          
-                            <div class="card-body text-center">
-                                {{!-- <i class="fas fa-map-marked-alt text-primary mb-2"></i> --}}
-                                <i class="fas fa-users"></i>
-                                <h4 class="text-uppercase m-0">{{user}}</h4>
-                                <hr class="my-4" />
-                                 <button class="btn delete-btn btn-danger" data-id="{{id}}">
-            Delete
-          </button>
-                                {{!-- <div class="small text-black-50">4923 Market Street, Orlando FL</div> --}}
-                            </div>
-                        </div>
-                    </div>
-                  {{/each}}
-                </div>
- 
-                <div class="social d-flex justify-content-center">
-                    <a class="mx-2" href="#!"><i class="fab fa-twitter"></i></a>
-                    <a class="mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
-                    <a class="mx-2" href="#!"><i class="fab fa-github"></i></a>
-                </div>
-            </div>
-        </section>
+<section class="contact-section bg-black">
+  <div class="container">
+    <div class="row">
+      {{#each user}}
+      <div class="col-md-4 mb-3 mt-3 mb-md-0">
+        <div class="card py-4 h-100">
+          <div class="card-body text-center">
+            <button class="btn  mx-auto btn-info " type="submit" id="submitBtn">{{user}}</button>
+             <button class="btn btn-danger" data-id="{{id}}">
+              <i class="fas fa-trash"></i>
+              </button>
+          </div>
+        </div>
+      </div>
+      {{/each}}
+    </div>
+    <div class="social d-flex justify-content-center">
+      <a class="mx-2" href="#!"><i class="fab fa-github"></i></a>
+    </div>
+  </div>
+</section>
