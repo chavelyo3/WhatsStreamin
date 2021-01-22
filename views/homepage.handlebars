@@ -22,10 +22,12 @@
  <section class="contact-section bg-black">   
   
             <div class="container">
-            {{#each user}}
-                <div class="row">
+           
+                <div class="row"> 
+                  {{#each user}}
                     <div class="col-md-4 mb-3 mb-md-0">
                         <div class="card py-4 h-100">
+                          
                             <div class="card-body text-center">
                                 {{!-- <i class="fas fa-map-marked-alt text-primary mb-2"></i> --}}
                                 <i class="fas fa-users"></i>
@@ -38,9 +40,9 @@
                             </div>
                         </div>
                     </div>
-                   
+                  {{/each}}
                 </div>
-{{/each}}
+ 
                 <div class="social d-flex justify-content-center">
                     <a class="mx-2" href="#!"><i class="fab fa-twitter"></i></a>
                     <a class="mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
