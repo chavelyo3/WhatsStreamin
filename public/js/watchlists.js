@@ -3,6 +3,7 @@
 $(document).ready(() => {
   $(document).on("click", "#apiSearch", searchShow);
   $(document).on("click", "#deleteUser", deleteUser);
+  $(document).on("click", "#deleteWatch", deleteWatch);
 
   async function searchShow(event) {
     event.preventDefault();
@@ -64,11 +65,23 @@ $(document).ready(() => {
   function deleteUser(event){
     event.preventDefault();
     const id = $("#deleteUser").data("id");
-    alert(id);
     $.ajax({
       method: "DELETE",
       url: "/api/users/delete/" + id
     })
       .then(location.reload());
   }
+
+  function deleteWatch(event){
+    event.preventDefault();
+    const id = $(this).data("id");
+  
+      $.ajax({
+      method: "DELETE",
+      url: "/api/watchlist/delete/" + id
+    })
+      .then(location.href = "http://www.w3schools.com");
+     }
+  
+
 }); //end .ready()
