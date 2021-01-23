@@ -22,17 +22,18 @@ module.exports = function(app) {
           id: req.params.id
         },
         include: [db.watchlist]
+        // raw: true
       })
       .then(data => {
         const movie = data.watchlists[0].dataValues.movie_title;
         const netflix = data.watchlists[0].dataValues.netflix;
+        // console.log(data.get({ plain: true }));
         const obj = {
           title: "Name",
           user: data,
           movie: movie,
           netflix: netflix
         };
-        console.log(data);
         res.render("user", obj);
       });
   });
