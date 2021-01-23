@@ -4,7 +4,7 @@ module.exports = function(app) {
   app.get("/", (req, res) => {
     db.user
       .findAll({
-        // include: [db.watchlist]
+        include: [db.watchlist]
       })
       .then(data => {
         const obj = {
@@ -20,13 +20,17 @@ module.exports = function(app) {
       .findOne({
         where: {
           id: req.params.id
-        }
-        // include: [db.Post]
+        },
+        include: [db.watchlist]
       })
       .then(data => {
+        const movie = data.watchlists[0].dataValues.movie_title;
+        const netflix = data.watchlists[0].dataValues.netflix;
         const obj = {
           title: "Name",
-          user: data
+          user: data,
+          movie: movie,
+          netflix: netflix
         };
         res.render("user", obj);
       });
