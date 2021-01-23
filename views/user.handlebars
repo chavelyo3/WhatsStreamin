@@ -5,7 +5,7 @@
         <i class="far fas fa-user fa-2x mb-2 text-white"></i>
         <h1 class="mx-auto text-white text-uppercase">{{user.user}}</h1>
         {{!-- delete button --}}
-        <button class="mt btn btn-danger" data-id="{{user.id}}">
+        <button class="mt btn btn-danger" id="deleteUser" data-id="{{user.id}}">
           <i class="fas fa-trash"></i>
         </button>
         {{!-- search form --}}
@@ -45,6 +45,3 @@
     </div>
   </div>
 </section>
-
-<p>{{user.watchlists}}</p>
-<p>{{movie}}</p>

@@ -2,6 +2,7 @@
 
 $(document).ready(() => {
   $(document).on("click", "#apiSearch", searchShow);
+  $(document).on("click", "#deleteUser", deleteUser);
 
   async function searchShow(event) {
     event.preventDefault();
@@ -59,4 +60,15 @@ $(document).ready(() => {
         return truth;
     });
   } //end callAPI function
+
+  function deleteUser(event){
+    event.preventDefault();
+    const id = $("#deleteUser").data("id");
+    alert(id);
+    $.ajax({
+      method: "DELETE",
+      url: "/api/users/delete/" + id
+    })
+      .then(location.reload());
+  }
 }); //end .ready()
