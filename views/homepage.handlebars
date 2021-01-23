@@ -1,19 +1,17 @@
 <section class="signup-section" id="signup">
-   
   <div class="container">
     <div class="row">
       <div class="col-md-10 col-lg-8 mx-auto text-center">
         <i class="far fas fa-ticket-alt fa-2x mb-2 text-white"></i>
         <p class="text-white-50">
-            
           Whats Streamin is a free tv/movie search engine. It can be yours right now, simply create your username below
-          on to use the page</a>
+          to use the page</a>
         </p>
         <h2 class="text-white mb-5">Type User Name Below</h2>
         <form class="form-inline d-flex">
           <input class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="username" type="text"
             placeholder="Enter Username..." />
-          <button class="btn btn-primary mx-auto js-scroll-trigger" type="submit" id="submitBtn"><i class="fas fa-user-plus"></i></button>
+          <button class="btn btn-primary mx-auto js-scroll-trigger" type="submit" id="submitBtn" data-id="{{id}}"><i class="fas fa-user-plus"></i></button>
         </form>
       </div>
     </div>
@@ -27,17 +25,16 @@
       <div class="col-md-4 mb-3 mt-3 mb-md-0">
         <div class="card py-4 h-100">
           <div class="card-body text-center">
-            <button class="btn  mx-auto btn-info " type="submit" id="submitBtn">{{user}}</button>
-             <button class="btn btn-danger" data-id="{{id}}">
-              <i class="fas fa-trash"></i>
-              </button>
+            <a href="/api/users/{{id}}">
+            <button class="btn  mx-auto btn-info " type="submit" id="userBtn">{{user}}</button>
+            </a>           
           </div>
         </div>
       </div>
       {{/each}}
     </div>
     <div class="social d-flex justify-content-center">
-      <a class="mx-2" href="#!"><i class="fab fa-github"></i></a>
+      <a class="mx-2" href="https://github.com/ZiWang55/WhatsStreamin"><i class="fab fa-github"></i></a>
     </div>
   </div>
 </section>
