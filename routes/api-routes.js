@@ -58,16 +58,4 @@ module.exports = function(app) {
       console.log("User Added");
     });
   });
-
-  // app.delete("/api/users/delete/:id", req => {
-  //   db.user
-  //     .destroy({
-  //       where: {
-  //         id: req.params.id
-  //       }
-  //     })
-  //     .then(() => {
-  //       console.log("Deleted Succesfully");
-  //     });
-  // });
 };
