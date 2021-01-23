@@ -25,27 +25,31 @@ module.exports = function(app) {
         // raw: true
       })
       .then(data => {
-        console.log(data.watchlists[0]);
-        let movie = 1;
-        let netflix = 1;
-        let hulu = 1;
-        let amazon = 1;
-        if (data.watchlists[0]) {
-          movie = data.watchlists[0].dataValues.movie_title;
-          netflix = data.watchlists[0].dataValues.netflix;
-          hulu = data.watchlists[0].dataValues.hulu;
-          amazon = data.watchlists[0].dataValues.amazon;
+        if (data.watchlists.length === 0) {
+          res.render("user", {
+            title: "Name",
+            user: data
+          });
+        } else {
+          for (let i = 0; i < data.watchlists.length; i++) {
+            const movie = data.watchlists[i].dataValues.movie_title;
+            const netflix = data.watchlists[i].dataValues.netflix;
+            const hulu = data.watchlists[i].dataValues.hulu;
+            const amazon = data.watchlists[i].dataValues.amazon;
+
+            const obj = {
+              title: "Name",
+              user: data,
+              movie: movie,
+              netflix: netflix,
+              hulu: hulu,
+              amazon: amazon
+            };
+            res.render("user", obj);
+          }
         }
+
         // console.log(data.get({ plain: true }));
-        const obj = {
-          title: "Name",
-          user: data,
-          movie: movie,
-          netflix: netflix,
-          hulu: hulu,
-          amazon: amazon
-        };
-        res.render("user", obj);
       });
   });
 
