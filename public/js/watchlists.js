@@ -33,6 +33,8 @@ $(document).ready(() => {
     let obj = {
       movie_title: title,
       netflix: netflixAPI,
+      hulu: huluAPI,
+      amazon: amazonAPI,
       userId: id
     };
 
