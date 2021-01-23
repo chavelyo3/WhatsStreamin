@@ -5,7 +5,7 @@
         <i class="far fas fa-user fa-2x mb-2 text-white"></i>
         <h1 class="mx-auto text-white text-uppercase">{{user.user}}</h1>
         {{!-- delete button --}}
-        <button class="mt btn btn-danger" data-id="{{user.id}}">
+        <button class="mt btn btn-danger" id="deleteUser" data-id="{{user.id}}">
           <i class="fas fa-trash"></i>
         </button>
         {{!-- search form --}}
@@ -32,7 +32,7 @@
             {{#if netflix}} <img src="https://github.com/ZiWang55/WhatsStreamin/blob/main/public/assets/img/netflix.png?raw=true" width="40px" height="40px">  {{/if}}
             {{#if hulu}}<img src="https://github.com/ZiWang55/WhatsStreamin/blob/main/public/assets/img/hulu.png?raw=true" width="40px" height="40px"> {{/if}}
             {{#if amazon}}<img src="https://github.com/ZiWang55/WhatsStreamin/blob/main/public/assets/img/amazon.png?raw=true" width="40px" height="40px"> {{/if}} </h1>
-            <button class="mt btn btn-danger" data-id="{{id}}">
+            <button class="mt btn btn-danger" id="deleteWatch" data-id="{{id}}">
               <i class="fas fa-trash"></i>
             </button>
 
@@ -46,4 +46,3 @@
     </div>
   </div>
 </section>
-
