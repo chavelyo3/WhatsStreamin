@@ -6,8 +6,8 @@ $(document).ready(() => {
   async function searchShow(event) {
     event.preventDefault();
     const title = $("#show")
-      .val()
-      .toLowerCase();
+      .val();
+    const id = $("#apiSearch").data("id");
 
     const settings = {
       async: true,
@@ -23,11 +23,24 @@ $(document).ready(() => {
       },
     };
 
-    const call = await callAPI(settings);
-    alert("Outside API IS " + call);
-  } //end function
+    //Checking for Netflix platform
+    const netflixAPI = await callAPI(settings,"Netflix","Netflix");
+    //Checking for Hulu platform
+    const huluAPI = await callAPI(settings,"Hulu","Hulu");
+    //Checking for HBO
+    const amazonAPI = await callAPI(settings,"Amazon Instant Video","Amazon Prime Video");
 
-  function callAPI(settings) {
+    let obj = {
+      movie_title: title,
+      netflix: netflixAPI,
+      userId: id
+    };
+
+    $.post("/api/watchlist", obj)
+      .then(location.reload());
+  } //end searchShow function
+
+  function callAPI(settings,location,location2) {
     return $.ajax(settings).then((data) => {
       // console.log(data);
       let truth = false;
@@ -35,12 +48,12 @@ $(document).ready(() => {
       for (let i = 0; i < data.results.length; i++) {
         let platforms = data.results[i];
         for (let j = 0; j < platforms.locations.length; j++) {
-          if (platforms.locations[j].display_name === "Netflix") {
+          if (platforms.locations[j].display_name === (location || location2)) {
+            // console.log(platforms.name);
             truth = true;
           }
         }
       }
-        alert("INSIDE API IS " + truth);
         return truth;
     });
   } //end callAPI function
