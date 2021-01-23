@@ -25,14 +25,25 @@ module.exports = function(app) {
         // raw: true
       })
       .then(data => {
-        const movie = data.watchlists[0].dataValues.movie_title;
-        const netflix = data.watchlists[0].dataValues.netflix;
+        console.log(data.watchlists[0]);
+        let movie = 1;
+        let netflix = 1;
+        let hulu = 1;
+        let amazon = 1;
+        if (data.watchlists[0]) {
+          movie = data.watchlists[0].dataValues.movie_title;
+          netflix = data.watchlists[0].dataValues.netflix;
+          hulu = data.watchlists[0].dataValues.hulu;
+          amazon = data.watchlists[0].dataValues.amazon;
+        }
         // console.log(data.get({ plain: true }));
         const obj = {
           title: "Name",
           user: data,
           movie: movie,
-          netflix: netflix
+          netflix: netflix,
+          hulu: hulu,
+          amazon: amazon
         };
         res.render("user", obj);
       });
