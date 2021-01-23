@@ -13,6 +13,14 @@ module.exports = function(sequelize, DataTypes) {
       netflix: {
         type: DataTypes.BOOLEAN,
         allowNull: false
+      },
+      hulu: {
+        type: DataTypes.BOOLEAN,
+        allowNull: false
+      },
+      amazon: {
+        type: DataTypes.BOOLEAN,
+        allowNull: false
       }
     },
     { freezeTableName: true }
