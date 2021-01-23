@@ -4,16 +4,16 @@
       <div class="col-md-10 col-lg-8 mx-auto text-center">
         <i class="far fas fa-user fa-2x mb-2 text-white"></i>
         <h1 class="mx-auto text-white text-uppercase">{{user.user}}</h1>
-
+        {{!-- delete button --}}
         <button class="mt btn btn-danger" data-id="{{user.id}}">
-              <i class="fas fa-trash"></i>
-            </button>
-              
-        <form class="form-inline d-flex">
+          <i class="fas fa-trash"></i>
+        </button>
+        {{!-- search form --}}
+        <form class="form-inline d-flex mt-3">
           <input class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="show" type="text" name="show"
             placeholder="Enter TV/Movie Name..." />
-          <button class="btn btn-primary mx-auto js-scroll-trigger" type="submit" id="apiSearch" data-id="{{user.id}}"><i
-              class="fas fa-search"></i></button>
+          <button class="btn btn-primary mx-auto js-scroll-trigger" type="submit" id="apiSearch"
+            data-id="{{user.id}}"><i class="fas fa-search"></i></button>
         </form>
       </div>
     </div>
@@ -23,14 +23,18 @@
 <section class="contact-section bg-black">
   <div class="container">
     <div class="row">
-      {{#each user}}
+      {{!-- movies card --}}
+      {{#each watchlist}}
       <div class="col-md-4 mb-3 mt-3 mb-md-0">
         <div class="card py-4 h-100">
           <div class="card-body text-center">
-          {{!-- <h1> {{}} </h1> --}}
+
+            <h3> {{watchlists}} </h3>
+
             <button class="mt btn btn-danger" data-id="{{id}}">
               <i class="fas fa-trash"></i>
             </button>
+
           </div>
         </div>
       </div>
