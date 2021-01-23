@@ -34,6 +34,7 @@ app.set("view engine", "handlebars");
 
 // Routes
 require("./routes/api-routes.js")(app);
+require("./routes/watch-api-routes.js")(app);
 
 // if (process.env.NODE_ENV = "test"){
 //   syncOptions.force = true;
