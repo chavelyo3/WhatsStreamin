@@ -6,4 +6,28 @@ module.exports = function(app) {
       console.log("it worked!");
     });
   });
+
+  app.delete("/api/users/delete/:id", req => {
+    db.user
+      .destroy({
+        where: {
+          id: req.params.id
+        }
+      })
+      .then(() => {
+        console.log("delted");
+      });
+  });
+
+  app.delete("/api/watchlist/delete/:id", req => {
+    db.watchlist
+      .destroy({
+        where: {
+          id: req.params.id
+        }
+      })
+      .then(() => {
+        console.log("deleted");
+      });
+  });
 };
