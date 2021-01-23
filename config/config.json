@@ -1,12 +1,8 @@
 {
   "development": {
     "username": "root",
-<<<<<<< HEAD
     "password": "12345",
 
-=======
-    "password": "password",
->>>>>>> 35cda8b6615f43c4068fe9f3b9aadbbe3338fc59
     "database": "streaming",
     "host": "127.0.0.1",
     "port": 3306,
