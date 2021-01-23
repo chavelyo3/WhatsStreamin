@@ -15,7 +15,7 @@ module.exports = function(app) {
         }
       })
       .then(() => {
-        console.log("Deleted Succesfully");
+        console.log("delted");
       });
   });
 
@@ -27,7 +27,7 @@ module.exports = function(app) {
         }
       })
       .then(() => {
-        console.log("Deleted Succesfully");
+        console.log("deleted");
       });
   });
 };

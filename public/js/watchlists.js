@@ -69,7 +69,7 @@ $(document).ready(() => {
     $.ajax({
       method: "DELETE",
       url: "/api/users/delete/" + id
-    }).then(location.reload());
+    }).then((window.location.href = "/"));
   }
 
   function deleteWatch(event) {
