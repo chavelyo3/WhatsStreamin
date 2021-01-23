@@ -6,4 +6,28 @@ module.exports = function(app) {
       console.log("it worked!");
     });
   });
+
+  app.delete("/api/users/delete/:id", req => {
+    db.user
+      .destroy({
+        where: {
+          id: req.params.id
+        }
+      })
+      .then(() => {
+        console.log("Deleted Succesfully");
+      });
+  });
+
+  app.delete("/api/users/delete/:id", req => {
+    db.user
+      .destroy({
+        where: {
+          id: req.params.id
+        }
+      })
+      .then(() => {
+        console.log("Deleted Succesfully");
+      });
+  });
 };
