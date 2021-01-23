@@ -23,14 +23,14 @@
 <section class="contact-section bg-black">
   <div class="container">
     <div class="row">
-      {{!-- movies card --}}
-      {{#each watchlist}}
+      {{#each user.watchlists}}
       <div class="col-md-4 mb-3 mt-3 mb-md-0">
         <div class="card py-4 h-100">
           <div class="card-body text-center">
-
-            <h3> {{watchlists}} </h3>
-
+          <h1> {{movie_title}}
+            {{#if netflix}}{{netflix}}{{/if}}
+            {{#if hulu}}{{hulu}}{{/if}}
+            {{#if amazon}}{{amazon}}{{/if}} </h1>
             <button class="mt btn btn-danger" data-id="{{id}}">
               <i class="fas fa-trash"></i>
             </button>
@@ -45,3 +45,6 @@
     </div>
   </div>
 </section>
+
+<p>{{user.watchlists}}</p>
+<p>{{movie}}</p>
