@@ -12,4 +12,4 @@ This application allows a user to search for a movie or show, then have it saved
 
 ## Screenshot:
 
-![](public\assets\img\whatsstreamin.png)
+![](/public/assets/img/whatsstreamin.png)
