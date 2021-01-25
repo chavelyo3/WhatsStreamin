@@ -1,10 +1,10 @@
-<center> # WhatsStreamin</center >
+# WhatsStreamin
 
 ![License:](https://img.shields.io/badge/WhatsStreamin-APACHE2.0-brightgreen)
 
 # Table of Contents
 
- * [Describtion](#Describtion)
+ * [Description](#Description)
   * [Installation](#Insallation)
   * [Usage](#Usage)
   * [Screenshot](#Screenshot)
@@ -12,7 +12,7 @@
   * [License](#License)
   * [Questions](#Questions)
 
-# Description:
+# Description
 
 This application allows a user to search for a movie or show, then have it saved on their watchlist, and will tell you what streaming service its on. You can also add/delete users.
 
@@ -30,7 +30,7 @@ This application allows a user to search for a movie or show, then have it saved
 ![demo](https://github.com/ZiWang55/WhatsStreamin/blob/main/public/assets/img/WhatsStreamin.gif?raw=true)
 
 
-# Contributing 
+# Contributors
 GitHubs for all contributors to this project.
 
 (names w. link to githubs)
