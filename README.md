@@ -1,4 +1,4 @@
-# WhatsStreamin
+# Whats Streamin?
 
 ![License:](https://img.shields.io/badge/WhatsStreamin-APACHE2.0-brightgreen)
 
@@ -33,7 +33,11 @@ This application allows a user to search for a movie or show, then have it saved
 # Contributors
 GitHubs for all contributors to this project.
 
-(names w. link to githubs)
+[James Leitschuh](https://github.com/jamesleitschuh02)<br>
+[Zi Wang](https://github.com/ZiWang55)<br>
+[Nathan Larson](https://github.com/ironicminer)<br>
+[Idil ](??)<br>
+[Roxette Banos](https://github.com/chavelyo3)
 
 # Questions
 Any questions about this project please reach out to any of the above contributors. 
