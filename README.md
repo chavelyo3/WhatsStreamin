@@ -18,15 +18,16 @@ This application allows a user to search for a movie or show, then have it saved
 
 # Installation
 
-<code>npm i</code>
+No installation needed to run application, can be viewed live through [Heroku](https://quiet-beach-99514.herokuapp.com/)
 
-## Heroku Link:
+ <br>
+* <code>npm i</code>
 
-[Deployed Link](https://quiet-beach-99514.herokuapp.com/)
+## Usage
 
 ## Screenshot
 
-
+View live through Heroku [here](https://quiet-beach-99514.herokuapp.com/).
 ![demo](https://github.com/ZiWang55/WhatsStreamin/blob/main/public/assets/img/WhatsStreamin.gif?raw=true)
 
 
